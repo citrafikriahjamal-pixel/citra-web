@@ -1284,6 +1284,23 @@
 }
     </style>
 </head>
+<script>
+consolole.log('checking images...');
+
+const imagesToCheck = [ 
+    'images/logo-fix.jpg',
+    'images/coloquium.jpg',
+    'images/coloquium2.jpeg'
+];
+
+imagesToCheck.forEach(imgPath => {
+    const img = new Image();
+    img.onload = () => console.log(`✅ Loaded: ${imgPath}`);
+    img.onerror = () => console.log(`❌ Failed: ${imgPath}`);
+    img.src = imgPath;
+});
+</script>
+    
 <body>
     <!-- Header -->
     <header>
