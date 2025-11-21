@@ -2656,7 +2656,42 @@
             }
         });
     }
-
+    <script>
+        function filterCourses(category) {
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Filter courses
+            const courses = document.querySelectorAll('.course-card');
+            courses.forEach(course => {
+                if (category === 'all' || course.getAttribute('data-category') === category) {
+                    course.style.display = 'flex';
+                } else {
+                    course.style.display = 'none';
+                }
+            });
+        }
+        <script>
+        function filterCourses(category) {
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Filter courses
+            const courses = document.querySelectorAll('.course-card');
+            courses.forEach(course => {
+                if (category === 'all' || course.getAttribute('data-category') === category) {
+                    course.style.display = 'flex';
+                } else {
+                    course.style.display = 'none';
+                }
+            });
+        }
     </script>
 
     
